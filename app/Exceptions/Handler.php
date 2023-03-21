@@ -3,7 +3,9 @@
 namespace App\Exceptions;
 
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Throwable;
+
 
 class Handler extends ExceptionHandler
 {
@@ -35,6 +37,7 @@ class Handler extends ExceptionHandler
         'password',
         'password_confirmation',
     ];
+    // 404 function
 
     /**
      * Register the exception handling callbacks for the application.
@@ -45,4 +48,11 @@ class Handler extends ExceptionHandler
             //
         });
     }
+    // if($this->isHttpException($exception)){
+    //     if ($exception instanceof NotFoundHttpException) {
+    //         return response()->view('404', [], 404);
+
+    //     }
+    //     return $this->renderHttpException($exception);
+    // }
 }
