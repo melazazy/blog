@@ -48,11 +48,4 @@ class Handler extends ExceptionHandler
             //
         });
     }
-    // if($this->isHttpException($exception)){
-    //     if ($exception instanceof NotFoundHttpException) {
-    //         return response()->view('404', [], 404);
-
-    //     }
-    //     return $this->renderHttpException($exception);
-    // }
 }
